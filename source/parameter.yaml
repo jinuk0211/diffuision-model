@@ -1,0 +1,17 @@
+torch.nn.functional as f
+encoder ----
+mean
+log_var
+var
+std
+VAEblock ----
+inchannels
+outchannels
+attention ----
+numheads
+embd
+headdim
+in_layer
+out_layer
+batchsize
+seqlen
