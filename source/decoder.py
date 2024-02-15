@@ -118,7 +118,7 @@ class VAEdecoder(nn.Sequential):
       #batchsize,128,height,width -> batchsize,3,height,width
       nn.Conv2d(128,3,kernel_size=3,padding=1)
     )
-  
+
   def __call__(self,x : torch.Tensor) -> torch.Tensor:
     # batchsize, 4, h/8, w/8
     x/= 0.18215
@@ -127,4 +127,3 @@ class VAEdecoder(nn.Sequential):
 
     # batchsize, 3, h, w
     return x
-     
