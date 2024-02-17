@@ -1,0 +1,8 @@
+accelerate
+fastapi>=0.90.1
+gradio==3.41.2
+numpy
+math
+requests
+transformers==4.30.2
+tqdm
