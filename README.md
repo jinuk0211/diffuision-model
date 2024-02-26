@@ -3,6 +3,11 @@ webui 한국어버젼
 CLIP prompt - korean
 deep danbooru 개량 예정
 
+
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/4ba23b38-c887-40c9-a023-228332ca89f3)
+
+
+
 diffusion model architecture 
 - 스테이블 디퓨전
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/142b7b85-a86f-42dd-b82c-f9a726ec37f6)
