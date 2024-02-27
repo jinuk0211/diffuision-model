@@ -2,7 +2,8 @@
 webui 한국어버젼 
 CLIP prompt - korean
 deep danbooru 개량 예정
-
+website - domain 구입 - aws web hosting - api
+website2 - gradio제공 domain사용 -backend- ,user authentication,postsql, or complex routing functionalities.
 
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/4ba23b38-c887-40c9-a023-228332ca89f3)
 
