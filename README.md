@@ -2,8 +2,12 @@
 webui 한국어버젼 
 CLIP prompt - korean
 deep danbooru 개량 예정
+
 website - domain 구입 - aws web hosting - api
 website2 - gradio제공 domain사용 -backend- ,user authentication,postsql, or complex routing functionalities.
+ex) instagram 5 million user 시절 아키텍쳐
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/c06f63f0-2e88-4d5e-9c48-fdc078d23468)
+
 
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/4ba23b38-c887-40c9-a023-228332ca89f3)
 
@@ -34,6 +38,11 @@ codeformer - 얼굴 복원
 
 IP adapter
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/0683be60-044e-4503-aabb-f09a8df7f413)
+
+
+hypernetwork - parameter업데이트 방식
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/261d4ad3-f400-4c6c-b2fb-3d36b1c045c4)
+
 
 
 backbone controlnet
