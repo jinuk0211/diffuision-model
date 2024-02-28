@@ -43,6 +43,7 @@ IP adapter
 
 
 hypernetwork - parameter업데이트 방식
+residual block 과 유사하지만 residual connection은 특정 feature의 벡터가 다음 트랜스포머 블록에 추가되지만 hypernetwork는  가공 전의 transformer 블록으로 다시 돌아가 추가된다는 차이가 있다
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/261d4ad3-f400-4c6c-b2fb-3d36b1c045c4)
 
 
