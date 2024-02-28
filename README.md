@@ -17,8 +17,15 @@ ex) instagram 5 million user 시절 아키텍쳐
 
 diffusion model architecture 
 - 스테이블 디퓨전
+- 그냥 이미지를 cnn layer unet 으로 upsample downsample 하던 것을
+- latent space에 noise를 추가하고 denoise함으로써 학습시키는 것으로 만듦
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/142b7b85-a86f-42dd-b82c-f9a726ec37f6)
 
+
+SDXL turbo
+
+stable diffusion model에서 unet을 2개로 늘림 base 역할의 unet, refiner역할의 unet 사용
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/906fc39e-093c-42ec-a540-496981109bd1)
 
 cascade 
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/5ab437ab-f857-48ee-9604-f5f9c2ab326e)
