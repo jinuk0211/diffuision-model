@@ -4,7 +4,7 @@ Diffusion model은 데이터를 noise와 반복적으로 혼합하여 최종적�
 CFM(Continuous Flow Matching)은 이런 플로우매칭 기법 중 하나로,
 데이터와 noise 사이의 전이 확률을 연속적인 함수로 모델링하여 분포 변화를 줄임. 이는 diffusion 과정의 연속성을 높여 모델 성능을 향상시킴
 
-![Uploading image.png…]()
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/ce43acc4-39a5-4f69-97a5-b65206e8fd2a)
 
 
 노이즈 분포 p1에서 샘플 x1과 데이터 분포 p0에서 샘플 x0 사이의 매핑을 정의하는 생성 모델 <- diffusion model 이 매핑은 일반적인 미분 방정식(ODE)의 형태로 표현됩니다.
