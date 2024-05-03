@@ -1,3 +1,5 @@
+참고 https://seastar105.tistory.com/176
+
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/a664b75d-e8a4-4e2b-9a79-8785ecbe2bc0)
 
 Diffusion model은 데이터를 noise와 반복적으로 혼합하여 최종적으로 pure noise 상태로 만든 뒤, 이 과정을 역방향으로 재현하여 원본 데이터를 복원하는 원리로 동작
@@ -10,6 +12,17 @@ Diffusion model은 데이터를 noise와 반복적으로 혼합하여 최종적�
 CFM(Continuous Flow Matching)은 이런 플로우매칭 기법 중 하나로,
 데이터와 noise 사이의 전이 확률을 연속적인 함수로 모델링하여 분포 변화를 줄임. 이는 diffusion 과정의 연속성을 높여 모델 성능을 향상시킴
 
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/f4f4daff-7135-42bc-847e-fca591ecb7c1)
+
+여기서 사용된 플로우 매칭 <-- Continuous Normalizing Flows 를 시뮬레이션 없이 효율적으로 훈련하는 방법
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/4c58c48f-1b8b-4b6a-a90e-5e5525acbe0d)Normalizing Flow는 위 그림과 같이 대부분의 생성 모델은 우리가 잘 알고 샘플링하기 쉬운 분포 z(노이즈)에서 생성하기 원하는 분포 x(input:입력이미지)
+로의 변환을 학습하게 된다. Normalizing Flow는 데이터 분포인 x에서 z로의 역변환(reverse pass)이 가능한 flow를 뉴럴 네트워크 가 학습하는 것이 목적
+뉴럴 네트워크 f는 역변환(reverse pass)이 가능하기 때문에 생성 시에는 z에서 뽑은 샘플 z0에 f^-1(역함수)를 적용하게 되면 output 생성이 가능해짐 
+
+CNF는 Neural Ordinary Differential Equations[^4]에서 제시됐는데 뉴럴넷이 변환 자체인 flow를 학습하는 것이 아니라, flow의 벡터장(vector field)를 학습하는 것
+
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/0fee2084-5de3-4db1-80a3-f6b05baac986)
+단점 <- 적분 때문에 매우느림
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/ce43acc4-39a5-4f69-97a5-b65206e8fd2a)
 
 
