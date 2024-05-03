@@ -1,5 +1,14 @@
 참고 https://seastar105.tistory.com/176
 
+stable diffusion 3 - rectified flow
+https://arxiv.org/pdf/2403.03206
+
+visual autoregressive modeling - gpt based 
+https://arxiv.org/abs/2404.02905
+
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/d3d38a72-7df4-4535-a973-2bde07f7cecb)
+
+
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/a664b75d-e8a4-4e2b-9a79-8785ecbe2bc0)
 
 Diffusion model은 데이터를 noise와 반복적으로 혼합하여 최종적으로 pure noise 상태로 만든 뒤, 이 과정을 역방향으로 재현하여 원본 데이터를 복원하는 원리로 동작
@@ -7,10 +16,7 @@ Diffusion model은 데이터를 noise와 반복적으로 혼합하여 최종적�
 이미지에 noise를 넣다 뺏다하는 과정을 통해 이미지들의 distribution을 학습함
 우리가 쓰는 이미지 생성은 여기 과정에 CLIP을 통해 텍스트 데이터를 추가해 학습시킨 것
 
-플로우매칭은 diffusion 과정에서 noise가 추가될 때마다 데이터 분포의 변화량을 최소화하도록 모델을 학습시키는 기법
-이를 통해 모델이 원본 데이터 분포를 보다 정확히 학습할 수 있음
-CFM(Continuous Flow Matching)은 이런 플로우매칭 기법 중 하나로,
-데이터와 noise 사이의 전이 확률을 연속적인 함수로 모델링하여 분포 변화를 줄임. 이는 diffusion 과정의 연속성을 높여 모델 성능을 향상시킴
+플로우매칭은 diffusion 모델이 노이즈가 있는 이미지를 입력받아 노이즈가 제거된 이미지를 생성할 때 모델 출력의 픽셀 값 분포가 실제 이미지의 픽셀 값 분포와 일치하도록 학습하는 것 - claude피셜
 
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/f4f4daff-7135-42bc-847e-fca591ecb7c1)
 
