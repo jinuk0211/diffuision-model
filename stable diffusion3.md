@@ -1,5 +1,5 @@
 참고 https://seastar105.tistory.com/176
-
+https://www.youtube.com/watch?v=5ZSwYogAxYg
 stable diffusion 3 - rectified flow
 https://arxiv.org/pdf/2403.03206
 
