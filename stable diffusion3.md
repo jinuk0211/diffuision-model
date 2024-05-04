@@ -43,6 +43,7 @@ CNF는 Neural Ordinary Differential Equations[^4]에서 제시됐는데 뉴럴�
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/0fee2084-5de3-4db1-80a3-f6b05baac986)
 단점 <- 적분 때문에 매우느림
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/ce43acc4-39a5-4f69-97a5-b65206e8fd2a)
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/da9cd1b5-5655-4c22-b208-3b30a4fa8ef8)
 
 
 노이즈 분포 p1에서 샘플 x1과 데이터 분포 p0에서 샘플 x0 사이의 매핑을 정의하는 생성 모델 <- diffusion model 이 매핑은 일반적인 미분 방정식(ODE)의 형태로 표현됩니다.
