@@ -1,7 +1,11 @@
 참고 https://seastar105.tistory.com/176
 https://www.youtube.com/watch?v=5ZSwYogAxYg
+https://www.youtube.com/watch?v=7NNxK3CqaDk
 stable diffusion 3 - rectified flow
 https://arxiv.org/pdf/2403.03206
+
+rectified flow 
+https://openreview.net/pdf?id=PqvMRDCJT9t
 
 visual autoregressive modeling - gpt based 
 https://arxiv.org/abs/2404.02905
@@ -16,11 +20,20 @@ Diffusion model은 데이터를 noise와 반복적으로 혼합하여 최종적�
 이미지에 noise를 넣다 뺏다하는 과정을 통해 이미지들의 distribution을 학습함
 우리가 쓰는 이미지 생성은 여기 과정에 CLIP을 통해 텍스트 데이터를 추가해 학습시킨 것
 
-플로우매칭은 diffusion 모델이 노이즈가 있는 이미지를 입력받아 노이즈가 제거된 이미지를 생성할 때 모델 출력의 픽셀 값 분포가 실제 이미지의 픽셀 값 분포와 일치하도록 학습하는 것 - claude피셜
-
+"flow matching"은 모델이 데이터 분포의 전/후방향 과정(forward/reverse process)에서 발생하는 확률 흐름(probability flow)을 정확히 따라가도록 학습시키는 것을 의미합니다.
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/f4f4daff-7135-42bc-847e-fca591ecb7c1)
 
 여기서 사용된 플로우 매칭 <-- Continuous Normalizing Flows 를 시뮬레이션 없이 효율적으로 훈련하는 방법
+rectified flow 논문 내용
+플로우 매칭은 Gaussian probability paths (노이즈와 데이터 샘플사이에서의)과 양립할 수 있다
+claude 피셜
+Probability path는 이러한 점진적인 노이즈 추가 및 제거 과정에서 거치는 확률 분포들의 궤적(trajectory)을 말합니다. 구체적으로 다음과 같은데
+
+초기 데이터 분포 q(x0)에서 시작합니다.
+노이즈를 점진적으로 추가하면서 q(x1|x0), q(x2|x1), ..., q(xT|xT-1) 와 같은 조건부 분포를 거칩니다. - markov chain
+마지막에는 q(xT) 와 같이 노이즈만 있는 가우시안 분포에 이릅니다.
+이제 역방향으로 p(xT-1|xT), p(xT-2|xT-1), ..., p(x0|x1)의 조건부 분포를 따라가며 노이즈를 제거합니다
+ p()와 q()는 얘네가 "probability path" 같음, 구성하는? 확률 분포
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/4c58c48f-1b8b-4b6a-a90e-5e5525acbe0d)Normalizing Flow는 위 그림과 같이 대부분의 생성 모델은 우리가 잘 알고 샘플링하기 쉬운 분포 z(노이즈)에서 생성하기 원하는 분포 x(input:입력이미지)
 로의 변환을 학습하게 된다. Normalizing Flow는 데이터 분포인 x에서 z로의 역변환(reverse pass)이 가능한 flow를 뉴럴 네트워크 가 학습하는 것이 목적
 뉴럴 네트워크 f는 역변환(reverse pass)이 가능하기 때문에 생성 시에는 z에서 뽑은 샘플 z0에 f^-1(역함수)를 적용하게 되면 output 생성이 가능해짐 
