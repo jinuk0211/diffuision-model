@@ -31,6 +31,7 @@ Probability path는 이러한 점진적인 노이즈 추가 및 제거 과정에
 
 학습된 벡터장은 desired probability path를 생성할 수 있게 됨 
 <- 노이즈에서 우리가 원하는 이미지를 생성할 수 있게된다는 뜻
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/13cd4ea5-8637-4018-8219-8824d4b15c84)
 
 이 벡터장은 flow matching 논문에 의하면
 per-example (i.e., conditional) formulations로 구하는게 가능함
