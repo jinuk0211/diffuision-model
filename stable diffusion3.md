@@ -39,6 +39,23 @@ per-example (i.e., conditional) formulations로 구하는게 가능함
 이 벡터장 학습시키는 공식은 score matching 노이즈 없애는 것에 영감을 받은 
 per-example training objective로 이게 == CFM (conditional flow matching)
 
+정확히는 whole vector field 로의 학습이 매우 매우 어렵고 불가능에 가깝기 때문에(intractable)
+각각의 sample에서의 conditional flow matching을 수행해서 뉴럴넷을 학습 
+
+이게 성립하는 이유는 이러한 aggregation 과 theorum 2 의 CFM 과 FM을 통해 구해지는 뉴럴넷의 파라미터가 동일하기 때문
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/54cc787c-9b24-4637-a84b-7ef9550c7074)
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/f4dfb302-ffd4-49c3-939b-6581ba40937c)
+
+CFM 공식은 (one point in the source distribtion -> target distribution)
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/2fc475be-d6ec-4b76-b4c8-d84784cb6ea1)
+
+이제 probability path와 vector field를 정의해 위의 CFM에 적용시키자
+probability path
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/438e0844-0784-46af-b8cf-2a6761cdebbc)
+vector field
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/a060b7b3-d5dd-441c-aef3-16eb94433c27)
+
+
 장점 
 
 위의 3의 문제를 해결 
