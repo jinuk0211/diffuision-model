@@ -9,6 +9,8 @@ https://openreview.net/pdf?id=PqvMRDCJT9t
  CNFs are capable of modeling arbitrary probability path and are in particular known to encompass the probability paths modeled by diffusion processes
  
 1.디퓨전 denoising score matching 를 제외하고는 효율적인 훈련 알고리즘의 부재
+
+
 2.기존의  maximum likelihood training의 경우 비싼 ODE simulations를
 3. existing simulation-free methods는  intractable integrals 또는 biased gradients를 포함했다
 이 논문에서는 이를 위해 FLOW MATCHNG 을 제안
@@ -52,7 +54,7 @@ CFM 공식은 (one point in the source distribtion -> target distribution)
 이제 probability path와 vector field를 정의해 위의 CFM에 적용시키자
 probability path
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/438e0844-0784-46af-b8cf-2a6761cdebbc)
-vector field
+VF - vector field
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/a060b7b3-d5dd-441c-aef3-16eb94433c27)
 
 
@@ -76,6 +78,7 @@ https://arxiv.org/abs/2404.02905
 
 
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/a664b75d-e8a4-4e2b-9a79-8785ecbe2bc0)
+
 
 Diffusion model은 데이터를 noise와 반복적으로 혼합하여 최종적으로 pure noise 상태로 만든 뒤, 이 과정을 역방향으로 재현하여 원본 데이터를 복원하는 원리로 동작
 
@@ -125,3 +128,11 @@ wiener process라고도 불리는데 diffusion에서는 noise의 식을 의미
 이 ut를 생성하기 위해, forward pass라는 것을 정의한다.(reverse path를 위해 forward pass를 정의 -> 벡터장 ut)
 이를 위해 우리는 p0과 p1 = N(0, 1) 사이의 확률 경로 pt에 해당하는 전방 과정을 정의합니다. 
 pt (p0 ~ p1) 식 : (2)
+
+stable diffusion 3
+
+optimal transfer obejective , diffusion objective 차이 비교
+더 빠르게
+![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/98ec8035-23a7-4a4b-afdd-4474b2fc7007)
+
+
