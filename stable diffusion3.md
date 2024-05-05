@@ -15,6 +15,7 @@ https://openreview.net/pdf?id=PqvMRDCJT9t
 이 flow matching을 통해 CNF (continous normalizing flow)를 학습
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/ec024b63-98b2-44b8-a90d-28bf88e48eb3)
 
+![Uploading image.png…]()
 
 이 때 flow matching의 학습하는 주체는 벡터장으로 
 이 벡터장이 probability path를 생성
