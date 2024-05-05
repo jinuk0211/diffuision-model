@@ -132,6 +132,7 @@ pt (p0 ~ p1) 식 : (2)
 stable diffusion 3
 
 optimal transfer obejective , diffusion objective 차이 비교
+Optimal Transport란, noise에서 data sample까지 직선으로 가는 path로 밑의 그림의 도식화 되있음
 더 빠르게
 ![image](https://github.com/jinuk0211/diffuision-model/assets/150532431/98ec8035-23a7-4a4b-afdd-4474b2fc7007)
 
